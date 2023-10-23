@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+</head>
+<body>
+    <center>
+        <div class="main">
+            <h1>Advance ecommerce </h1>
+        <input class="input"  type="text" placeholder="product name" id="productname">
+        <input class="input" type="text" placeholder="product description" id="Prductdescription">
+        <input class="input" type="text" placeholder="product price" id="Prductprice">
+        <button class="add-btn" id="btn" onclick="EnterYourproduct()"> Add</button>
+       <div class="result">
+        <table>
+            <thead>
+                <tr> 
+                    <th>S/N</th>
+                    <th>product name</th>
+                    <th style="width: 200px;">product description</th> 
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="show">
+    
+            </tbody>
+        </table>
+       </div>
+       
+        </div>
+        
+    </center>
+   
+    
+
+    <script>
+        var ProductArray = [];
+
+        // button to submit product
+     function EnterYourproduct() {
+        var productname= productname.value
+        var productdescription = productdescription.value
+        var productprice = productprice.value
+
+       var productObj = {
+           productname,
+           productdescription,
+           productprice,
+       }
+
+       if (productname == '' & productdescription == '' & productprice == '') {
+        alert('Enter your product')
+       } else {
+        ProductObj.push(productObj)
+       document.getElementById('productname').value = ""
+       document.getElementById('productdescription').value = ""
+       document.getElementById('productprice')
+      EnterYourproduct()
+       }
+    }
+    
+ 
+    function EnterYourproduct() {
+    show.innerHTML = "";
+    EnterYourproduct.map((pro, ind) => {
+    
+    var row = `
+    <tr>
+        <td>${ind + 1}</td>
+        <td>${pro.productname}</td>
+        <td class= "spec-td" >${pro.productdescription}</td>
+        <td>${pro.productprice}</td>
+        <td class="btn-div" ><button style="margin-right: 10px;" onclick="deleteproduct(${ind})">Del</button> 
+        <button onclick="editTodo(${ind})">Edit</button>
+        </td>
+        </tr>
+        `;
+
+        show.innerHTML += row;
+})
+        }
+           function deleteproduct(ind) {
+            product.splice(ind, 1)
+            renderproduct()           
+      }
+
+      function editproduct(ind) {
+        var newTitle = prompt('Enter your product name');
+        var newDetails = prompt('Todo Details');
+       
+            product[ind].title = productname;
+        product[ind].details = productdescription;
+        renderTodo();
+      
+       
+      }
+      productdescription.addEventListener('keydown', function(key) {
+            if (key.code === 'Enter') {
+                 EnterYourproduct();
+            }
+        })
+         
+     
+     
+
+     
+
+      
+    </script>
+</body>
+</html>
+    
+     
+</body>
+</html>

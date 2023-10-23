@@ -1,0 +1,116 @@
+
+body {
+    background-color: goldenrod;
+}
+
+.add-btn{
+    background-color: rgb(212, 205, 18);
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    width: 50px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.add-btn:hover{
+    color: rgb(232, 182, 56);
+    background-color: black;
+    transition: .6s;
+
+}
+
+input {
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+.result {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+table {
+    border: 3px solid rgb(228, 193, 64);
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+}
+
+
+
+.btn-div{
+    border-bottom: none;
+    /* background-color: blue; */
+    display: f;
+}
+
+.btn-div button{
+    background-color: rgb(143, 100, 9);
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-div button:hover{
+    color: rgb(128, 87, 0);
+    transition: .5s ease-in-out;
+    background-color: rgb(141, 116, 4);
+   
+}
+
+
+@media screen and (max-width: 768px) {
+    .main {
+        width: 90%;
+        max-width: 100%;
+    }
+    .input {
+        width: 100%;
+        
+    }
+    .add-btn {
+        width: 100%;
+    }
+}
+
+
+
+table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+}
+
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc; 
+}
+
+.spec-td{
+    min-width: 300px;
+    
+}
+
+
+th {
+    background-color: rgb(128, 105, 0);
+    color: #fff;
+}
+
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+ tr:nth-child(odd) {
+    background-color: #fff;
+}
+ 
+
